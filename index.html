@@ -3,79 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Blog - Image Recognition</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
-        }
-        main {
-            padding: 20px;
-        }
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .button-container {
-            margin: 20px 0;
-        }
-        .button-container button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .button-container button:hover {
-            background-color: #0056b3;
-        }
-        #webcam-container {
-            margin: 20px 0;
-        }
-        #label-container div {
-            margin: 5px 0;
-            padding: 10px;
-            background-color: #f1f1f1;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-    </style>
+    <title>Teachable Machine</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>AI Blog - Image Recognition</h1>
+        <nav>
+            <div class="logo">Teachable Machine</div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <div class="content">
-            <h2>Exploring Image Recognition with AI</h2>
-            <p>Welcome to our AI blog! Today, we're diving into the fascinating world of image recognition. This technology allows computers to identify and process images just like the human brain does. Below, you can test out an image recognition model yourself by clicking the "Start" button and seeing the results in real-time using your webcam.</p>
-            
-            <div class="button-container">
-                <button type="button" onclick="init()">Start</button>
-            </div>
-            
-            <div id="webcam-container"></div>
-            <div id="label-container"></div>
-        </div>
-    </main>
-
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Teachable Machine</h1>
+            <p>Easy, Fast, and Fun Machine Learning for Everyone</p>
+            <div style="font-size: 24px; text-align: center; margin-top: 20px;">Teachable Machine Image Model</div>
+    <button type="button" onclick="init()" style="display: block; margin: 20px auto; padding: 15px 30px; font-size: 20px; cursor: pointer;">Start</button>
+    <div id="webcam-container"></div>
+    <div id="label-container"></div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
+        // More API functions here:
+        // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
         // the link to your model provided by Teachable Machine export panel
         const URL = "https://teachablemachine.withgoogle.com/models/pUSRNc2MA/";
 
@@ -122,5 +78,44 @@
             }
         }
     </script>
+        </div>
+    </section>
+    
+    
+    
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-item">
+            <h3>Easy to Use</h3>
+            <p>No coding required! Simply teach your machine by showing examples.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Fast and Efficient</h3>
+            <p>Get results in real-time with high accuracy and performance.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Versatile</h3>
+            <p>Use for a variety of applications such as image recognition, sound classification, and more.</p>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-item">
+            <p>"Teachable Machine has revolutionized the way we approach machine learning. It's incredibly user-friendly and powerful."</p>
+            <h4>Mubashir Hussain</h4>
+        </div>
+        <div class="testimonial-item">
+            <p>"I was amazed at how quickly I could train a model and see results. This tool is a game-changer!"</p>
+            <h4>Mubashir Hussain</h4>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2024 Teachable Machine. All rights reserved.</p>
+            <p>Contact us at <a href="mailto:kingmubashir018@gmail.com">kingmubashir018@gmail.com</a></p>
+        </div>
+    </footer>
 </body>
 </html>
